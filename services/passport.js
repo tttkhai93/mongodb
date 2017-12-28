@@ -11,6 +11,7 @@ passport.deserializeUser((id, done)=>{
   User.findById(id).then((user)=>{done(null,user);
   });
 });
+
 // console.developers.google.com to get google authen api
 passport.use(new GoogleStrategy({
   clientID: keys.googleClientID,
