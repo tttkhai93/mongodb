@@ -2,11 +2,9 @@ const mongoose = require('mongoose');
 const {Schema} = mongoose;
 
 const userSchema = new Schema({
-  name: {
-    type: String,
-    require: true,
-    minLength: 1
-  }
+  googleId: String
 });
 
-var Todo = mongoose.model('todos', userSchema);
+var User = mongoose.model('users', userSchema);
+
+module.exports = {User};
